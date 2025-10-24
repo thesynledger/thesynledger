@@ -1,35 +1,40 @@
-# SynLedger — Web3 Escrow & Smart Payment Infrastructure
+![Synledger](./assets/synledger-1500x500.jpeg "Synledger")
 
-A **Web3-native escrow and payout system** where users can:
-- Send or receive **stablecoin payments** (USDT / USDC / PYUSD)
-- Lock funds into **smart contract escrow** until milestone completion
-- Use **multi-sig approval** or **auto-release with oracles**
-- Access via **Web UI or API** for integration into marketplaces
+# 🏦 Welcome to SynLedger Docs
 
-Essentially:  
-> The “Stripe + PayPal + Escrow.com” of Web3 — fully transparent, programmable, and borderless.
+> **Programmable Escrow for the Web3 Economy**  
+> Flexible, transparent, and developer-ready escrow infrastructure built for the next generation of payments.
 
 ---
 
-## 🔍 2. Problem & Opportunity
+## What is SynLedger?
 
-| Problem | Solution |
-|----------|-----------|
-| Freelancers lose money to PayPal fees, chargebacks, or delays | Smart-contract escrow in stablecoins (no bank delay) |
-| Clients hesitate to prepay due to trust issues | On-chain hold & milestone-based release |
-| Marketplaces want crypto escrow but lack developer tooling | SynLedger API for plug-and-play escrow integration |
-| Web3 devs need verifiable payment rails for dApps | SynLedger SDK with easy contract calls |
-
-🪙 **Target markets**  
-- Freelancers / agencies  
-- Crypto marketplaces  
+**SynLedger** is a hybrid Web3 escrow and payout protocol that combines **multi-sig trust** and **oracle automation** to power programmable payments for:
+- Freelancers and agencies  
 - DAO bounty systems  
-- NFT or digital goods transactions  
+- Web3 marketplaces  
+- Digital service contracts  
+
+It’s the **first escrow that adapts to your deal** — giving users the freedom to choose between **manual approval** or **automated oracle releases**, or even both.
 
 ---
 
-## 3. Concepts
+## Why SynLedger?
 
-- [Multi-Signature](./multi-sig.md)
-- [Programmable Escrow](./programmable.md)
-- [Competitor Analysis](./competitor.md)
+Traditional escrow platforms are rigid — either fully manual or fully automated.  
+SynLedger changes that by introducing **hybrid escrow logic** that balances *trust and automation*.
+
+| Feature | Traditional Escrow | SynLedger Hybrid |
+|----------|--------------------|------------------|
+| **Mode** | Manual *or* automated | Configurable per deal |
+| **Fallback** | None | Built-in multi-sig safety |
+| **Transparency** | Partial | Fully on-chain |
+| **Integration** | Closed system | Open SDK + API stack |
+
+> “SynLedger = Stripe + Escrow + Chainlink — unified.”
+
+---
+
+Ready?, let's dive right in...
+
+➡️ Next: [Introduction](./1. introduction.md)
