@@ -35,6 +35,6 @@ SynLedger changes that by introducing **hybrid escrow logic** that balances *tru
 
 ---
 
-Ready?, let's dive right in...
+Ready? let's dive right in...
 
 ➡️ Next: [Introduction](./1. introduction.md)
