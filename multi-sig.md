@@ -108,7 +108,7 @@ Auto-release means funds are released **automatically** when the oracle confirms
 <img src="./assets/multi-sig-hybrid.svg" alt="Hybrid Mode" width="700" height="600">
 
 
-## 🧠 Why SynLedger Supports Both
+## Why SynLedger Supports Both
 
 SynLedger supports **both systems** for flexibility:
 

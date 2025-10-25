@@ -1,12 +1,12 @@
 
-# 🧩 SynLedger Competitor Landscape & Analysis (2025)
+# SynLedger Competitor Landscape & Analysis (2025)
 
 > A strategic comparison of decentralized escrow and crypto payment competitors in the Web3 ecosystem.  
 > Prepared for SynLedger — Multi-chain Smart Wallet + Escrow API.
 
 ---
 
-## 🏦 Overview
+## Overview
 
 The decentralized escrow and payment space is growing, but remains fragmented. Most current players either:  
 - focus on **single-chain escrow**,  
@@ -17,7 +17,7 @@ SynLedger’s advantage: an **API-first, multi-chain, programmable escrow** for 
 
 ---
 
-## 🧠 Market Segments
+## Market Segments
 
 | Segment | Description | Typical Players |
 |----------|--------------|-----------------|
@@ -31,7 +31,7 @@ SynLedger operates in the **Freelance + B2B API** intersection — **non-custodi
 
 ---
 
-## 🔍 Competitor Matrix
+## Competitor Matrix
 
 | Platform | Description | Chains Supported | Key Strengths | Weaknesses | SynLedger Advantage |
 |-----------|--------------|------------------|----------------|-------------|----------------------|
@@ -47,7 +47,7 @@ SynLedger operates in the **Freelance + B2B API** intersection — **non-custodi
 
 ---
 
-## 🧮 Comparative Feature Table
+## Comparative Feature Table
 
 | Feature | SynLedger | Uniscrow | Smartlink | Kleros Escrow | BitCheck | Request Finance |
 |----------|------------|-----------|------------|----------------|-----------|-----------------|
@@ -64,7 +64,7 @@ SynLedger operates in the **Freelance + B2B API** intersection — **non-custodi
 
 ---
 
-## 🪙 Market Gaps SynLedger Can Exploit
+## Market Gaps SynLedger Can Exploit
 
 1. **API-First Infrastructure**  
    Most platforms lack developer integration tools (SDKs, REST/GraphQL APIs). SynLedger can become the "Stripe for Web3 escrow".
@@ -86,7 +86,7 @@ SynLedger operates in the **Freelance + B2B API** intersection — **non-custodi
 
 ---
 
-## ⚙️ Strategic Positioning Summary
+## Strategic Positioning Summary
 
 | Dimension | SynLedger Position |
 |------------|--------------------|
@@ -98,7 +98,7 @@ SynLedger operates in the **Freelance + B2B API** intersection — **non-custodi
 
 ---
 
-## 📈 Strategic Recommendations
+## Strategic Recommendations
 
 1. **Position SynLedger as “the PayPal of Web3 Freelancing”**  
    Emphasize trust, speed, and programmability.
@@ -117,7 +117,7 @@ SynLedger operates in the **Freelance + B2B API** intersection — **non-custodi
 
 ---
 
-### 📊 Competitive Position Map (text version)
+### Competitive Position Map (text version)
 
 **X-Axis:** Custody Spectrum → Custodial | Non-custodial  
 **Y-Axis:** UX / API Sophistication
@@ -139,7 +139,7 @@ SynLedger                     ●  (High UX/API + Fully Non-custodial)
 
 ---
 
-### 📎 Summary
+### Summary
 
 | Category | Details |
 |-----------|----------|

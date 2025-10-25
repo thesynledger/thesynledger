@@ -1,6 +1,6 @@
 ![Synledger](./assets/synledger-1500x500.jpeg "Synledger")
 
-# 🏦 Welcome to SynLedger Docs
+# Welcome to SynLedger Docs
 
 > **Programmable Escrow for the Web3 Economy**  
 > Flexible, transparent, and developer-ready escrow infrastructure built for the next generation of payments.

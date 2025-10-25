@@ -9,7 +9,7 @@ In traditional escrow systems (like **Escrow.com** or **PayPal**), rules for whe
 
 In **SynLedger**, “programmable escrow” means:
 
-> 💡 The escrow’s logic — **how**, **when**, and **why** funds move — is defined by *code*, not by a company or admin.
+> The escrow’s logic — **how**, **when**, and **why** funds move — is defined by *code*, not by a company or admin.
 
 Developers, businesses, and DAOs can **program custom rules**, **conditions**, and **dispute handling** directly via SynLedger’s smart contracts and APIs.
 
@@ -52,11 +52,11 @@ if (oracle.status("Milestone1") == true && block.timestamp > unlockTime) {
 - Trigger payout after DAO vote approval.
 
 Built-in logic modules include:
-- ⏱️ Time-lock  
-- 🧾 Oracle verification  
-- 🧍 Multi-sig  
-- ⚡ Hybrid (oracle + human fallback)  
-- 💸 Auto-refund on expiry  
+- Time-lock  
+- Oracle verification  
+- Multi-sig  
+- Hybrid (oracle + human fallback)  
+- Auto-refund on expiry  
 
 ---
 
@@ -98,7 +98,7 @@ SynLedger = **programmable trust automation layer** for Web3 commerce.
 | Human-controlled | Code-enforced fairness |
 | Closed | Composable with other contracts |
 
-> 🔑 SynLedger makes **escrow programmable the same way Ethereum made money programmable.**
+> SynLedger makes **escrow programmable the same way Ethereum made money programmable.**
 
 ---
 
