@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SynLedger — Programmable Escrow for Web3</title>
+  <meta name="description" content="Hybrid escrow rails that blend multi‑sig trust with oracle automation. Transparent, programmable, borderless payments." />
+  <meta property="og:title" content="SynLedger — Programmable Escrow for Web3" />
+  <meta property="og:description" content="Hybrid escrow: multi‑sig + oracle automation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/social-card.png" />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="SynLedger logo" width="28" height="28" />
+        <span>SynLedger</span>
+      </a>
+      <nav class="menu">
+        <a class="active" href="index.html">Home</a>
+        <a id="docs-link" href="#">Docs</a>
+        <a href="founders.html">Founders</a>
+        <a id="github-link" href="#" rel="noopener">GitHub</a>
+        <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container reveal">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="pill">Hybrid Escrow • Multi‑sig + Oracle</p>
+          <h1>Programmable trust for the Web3 economy</h1>
+          <p class="lead">
+            SynLedger lets you define how funds move: <strong>manual approvals</strong> when humans decide, or
+            <strong>oracle automation</strong> when data does. The first escrow that adapts to your deal.
+          </p>
+          <div class="cta">
+            <a id="get-started" class="btn primary">Read the Docs</a>
+            <a class="btn ghost" href="founders.html">Talk to Founders</a>
+          </div>
+
+          <ul class="stats">
+            <li><strong>3</strong><span>release modes</span></li>
+            <li><strong>L2</strong><span>ready</span></li>
+            <li><strong>SDK</strong><span>API + webhooks</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-card glass">
+          <div class="card-head">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="title">Escrow • #4321</span>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <span>Status</span><b>Locked</b>
+            </div>
+            <div class="row">
+              <span>Amount</span><b>1,000 USDC</b>
+            </div>
+            <div class="row">
+              <span>Release</span><b>Oracle → Multi‑sig fallback</b>
+            </div>
+            <div class="progress">
+              <div class="bar" style="width: 62%"></div>
+            </div>
+            <div class="hint">Milestone 2 of 3 • waiting for oracle confirmation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container reveal">
+      <article class="feature glass">
+        <div class="icon">🔀</div>
+        <h3>Hybrid by design</h3>
+        <p>Choose manual approvals, automated oracle releases, or a fallback combo — per contract.</p>
+      </article>
+      <article class="feature glass">
+        <div class="icon">⚖️</div>
+        <h3>Dispute‑ready</h3>
+        <p>Disputes flip to multi‑sig. Every state change is verifiable on‑chain.</p>
+      </article>
+      <article class="feature glass">
+        <div class="icon">🧩</div>
+        <h3>Developer‑first</h3>
+        <p>Clean REST + JS SDK, webhooks, and ready‑to‑use Solidity interfaces.</p>
+      </article>
+    </section>
+
+    <section class="how container reveal">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li class="step">
+          <div class="step-badge">1</div>
+          <div class="step-body">
+            <h4>Create escrow</h4>
+            <p>Client funds the contract in stablecoins, defines milestones & release mode.</p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-badge">2</div>
+          <div class="step-body">
+            <h4>Track progress</h4>
+            <p>Oracle watches signals (time, API, on‑chain events). Parties can raise disputes.</p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-badge">3</div>
+          <div class="step-body">
+            <h4>Release funds</h4>
+            <p>Auto‑release on success. If disputed, fall back to multi‑sig approval.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="cards container reveal">
+      <article class="card glass">
+        <h4>Freelance Contracts</h4>
+        <p>High‑trust work with milestone approvals using multi‑sig.</p>
+      </article>
+      <article class="card glass">
+        <h4>DAO Bounties</h4>
+        <p>Auto‑release on merged PRs or on‑chain signals via oracles.</p>
+      </article>
+      <article class="card glass">
+        <h4>SLA Escrow</h4>
+        <p>Uptime & KPI‑driven payouts with hybrid fallback for disputes.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footgrid">
+      <div>
+        <div class="brandline">
+          <img src="assets/logo.svg" alt="" width="22" height="22" />
+          <strong>SynLedger</strong>
+        </div>
+        <p class="muted">Programmable trust for Web3 payments.</p>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a id="docs-link-footer" href="#">Docs</a></li>
+          <li><a href="founders.html">Founders</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <ul>
+          <li><a id="github-link-footer" href="#">GitHub</a></li>
+          <li><a href="mailto:support@synledger.xyz">Email</a></li>
+          <li><a href="https://twitter.com/SynLedger" target="_blank" rel="noopener">X / Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container tiny muted">© <span id="year"></span> SynLedger. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

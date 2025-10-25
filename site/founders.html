@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SynLedger Founders</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2c6ee8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111721",
+                        "text-light-primary": "#0e121b",
+                        "text-light-secondary": "#4e6897",
+                        "text-dark-primary": "#f8f9fc",
+                        "text-dark-secondary": "#a9b8d2",
+                        "card-light": "rgba(255, 255, 255, 0.6)",
+                        "card-dark": "rgba(30, 41, 59, 0.6)",
+                        "border-light": "#e7ebf3",
+                        "border-dark": "#334155"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 8px 32px 0 rgba(31, 38, 135, 0.1)',
+                    },
+                    backdropBlur: {
+                        'xl': '20px',
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar Component -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-border-light dark:border-border-dark bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-xl">
+<div class="mx-auto flex max-w-5xl items-center justify-between whitespace-nowrap px-4 py-3 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-[-0.015em] text-text-light-primary dark:text-text-dark-primary">SynLedger</h2>
+</div>
+<div class="hidden items-center gap-9 md:flex">
+<a class="text-sm font-medium text-text-light-primary dark:text-text-dark-primary hover:text-primary dark:hover:text-primary transition-colors" href="#">Product</a>
+<a class="text-sm font-medium text-text-light-primary dark:text-text-dark-primary hover:text-primary dark:hover:text-primary transition-colors" href="#">Developers</a>
+<a class="text-sm font-medium text-text-light-primary dark:text-text-dark-primary hover:text-primary dark:hover:text-primary transition-colors" href="#">Company</a>
+<a class="text-sm font-medium text-text-light-primary dark:text-text-dark-primary hover:text-primary dark:hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Get Started</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center py-16 sm:py-24">
+<div class="flex w-full max-w-5xl flex-col gap-16 px-4 sm:px-6 lg:px-8">
+<!-- PageHeading Component -->
+<div class="flex flex-col items-center gap-4 text-center">
+<p class="text-4xl font-black tracking-[-0.033em] text-text-light-primary dark:text-text-dark-primary sm:text-5xl">Meet the Founders</p>
+<p class="max-w-2xl text-base font-normal text-text-light-secondary dark:text-text-dark-secondary sm:text-lg">We’re building programmable, verifiable escrow rails for the internet of value.</p>
+</div>
+<!-- ImageGrid Component -->
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+<!-- Founder Card 1 -->
+<div class="flex flex-col gap-6 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-6 shadow-soft backdrop-blur-xl">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg" data-alt="Professional headshot of Israel Duff" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAx_cnXkoF2oMsK8MkTbMr6QyH-IDNNrHT3oSdUl7jNHrnQEW96rz4JeZCDwAED07MSu9imcIc19cabo7XwSR_2L4Qi36lqRVn_OxZv8krpH3FToj4FUal7l5VTDPoRN9gLsawBuT01yAOADurFFRJ5yFIaxPIzcSZC7hijwSNBuoIREUhvXnkDhqx5IKf40wu8B524VWh0riSk6e3HDI1hdko1jvCHHpSWDgMp2a1EKKwOr9_rJWI_wAauYSsgIorCnLzgG8Rr1XA");'></div>
+<div class="flex flex-col gap-4">
+<div>
+<p class="text-xl font-bold text-text-light-primary dark:text-text-dark-primary">Israel Duff</p>
+<p class="text-base font-medium text-primary">Founder &amp; Product</p>
+</div>
+<p class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">
+                                Israel is a visionary entrepreneur with a deep background in decentralized finance and product development, dedicated to building the future of trustless transactions on the web.
+                            </p>
+<div class="flex flex-wrap gap-3 pt-2">
+<a class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-border-light dark:bg-border-dark pl-3 pr-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors" href="mailto:thesynledger@gmail.com">
+<span class="material-symbols-outlined text-base text-text-light-primary dark:text-text-dark-primary">mail</span>
+<p class="text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Email</p>
+</a>
+<a class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-border-light dark:bg-border-dark pl-3 pr-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors" href="https://x.com/syn_ledger">
+<span class="material-symbols-outlined text-base text-text-light-primary dark:text-text-dark-primary">group</span>
+<p class="text-sm font-medium text-text-light-primary dark:text-text-dark-primary">X/Twitter</p>
+</a>
+<a class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-border-light dark:bg-border-dark pl-3 pr-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors" href="#">
+<span class="material-symbols-outlined text-base text-text-light-primary dark:text-text-dark-primary">calendar_month</span>
+<p class="text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Book a Call</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Co-Founder Card -->
+<div class="flex flex-col gap-6 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-6 shadow-soft backdrop-blur-xl">
+<div class="flex items-center justify-center w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg bg-border-light dark:bg-border-dark">
+<span class="material-symbols-outlined text-6xl text-text-light-secondary dark:text-text-dark-secondary opacity-50">diversity_3</span>
+</div>
+<div class="flex flex-col gap-4">
+<div>
+<p class="text-xl font-bold text-text-light-primary dark:text-text-dark-primary">Marvellous Gabriel</p>
+<p class="text-base font-medium text-primary">Co-Founder &amp; Product</p>
+</div>
+<p class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">
+                                We are actively seeking strategic partners and co-founders who share our vision. If you are passionate about building the future of the internet economy, let's connect.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Press & Partnerships Section -->
+<div class="flex flex-col gap-8 pt-8">
+<div class="flex flex-col items-center">
+<h2 class="text-2xl font-bold tracking-[-0.015em] text-text-light-primary dark:text-text-dark-primary">Press &amp; Partnerships</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<a class="flex flex-col items-center justify-center gap-2 rounded-xl p-6 bg-border-light dark:bg-border-dark hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="mailto:press@synledger.xyz">
+<span class="material-symbols-outlined text-3xl text-primary">newspaper</span>
+<p class="text-base font-semibold text-text-light-primary dark:text-text-dark-primary">Press Inquiries</p>
+<p class="text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary">press@synledger.xyz</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-2 rounded-xl p-6 bg-border-light dark:bg-border-dark hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="mailto:partnerships@synledger.xyz">
+<span class="material-symbols-outlined text-3xl text-primary">handshake</span>
+<p class="text-base font-semibold text-text-light-primary dark:text-text-dark-primary">Partnership Opportunities</p>
+<p class="text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary">partnerships@synledger.xyz</p>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

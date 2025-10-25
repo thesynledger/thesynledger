@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SynLedger: Programmable Escrow for the Web3 Economy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2c6ee8",
+            "background-light": "#f6f6f8",
+            "background-dark": "#111721",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dark .glass-card {
+      background-color: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .gradient-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120%;
+      max-width: 1200px;
+      height: 600px;
+      background-image: radial-gradient(circle, rgba(44, 110, 232, 0.15) 0%, rgba(44, 110, 232, 0) 60%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .dark .gradient-glow {
+       background-image: radial-gradient(circle, rgba(44, 110, 232, 0.25) 0%, rgba(44, 110, 232, 0) 70%);
+    }
+
+  </style>
+
+  <script>
+    function talkToFounders() {
+      window.location.href = "./site/founders.html";
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased">
+<div class="relative w-full overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-6xl">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-slate-900/10 dark:border-slate-50/[0.06] h-16 my-2 px-6 rounded-xl glass-card">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-white">SynLedger</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="./site">Home</a>
+<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="/">Docs</a>
+<a class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="./site/founders.html">Founders</a>
+</nav>
+<div class="flex items-center gap-2">
+<a class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-slate-200/50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">code</span>
+</a>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-slate-200/50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-xl hidden dark:inline">light_mode</span>
+</button>
+<button class="md:hidden flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-slate-200/50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="isolate">
+<!-- Gradient Glow -->
+<div class="gradient-glow"></div>
+<!-- Hero Section -->
+<section class="relative py-20 sm:py-24 lg:py-32">
+<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
+<span class="inline-flex items-center justify-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary dark:bg-primary/20">Programmable Escrow for the Web3 Economy</span>
+<h1 class="text-5xl font-extrabold tracking-tighter text-slate-900 dark:text-white sm:text-6xl lg:text-7xl">Trustless Agreements, Automated</h1>
+<p class="max-w-md text-base text-slate-600 dark:text-slate-400 sm:text-lg">SynLedger provides programmable escrow for the Web3 economy, ensuring secure and automated fund release upon milestone completion.</p>
+<div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+<button class="inline-flex items-center justify-center whitespace-nowrap rounded-lg h-12 px-6 bg-primary text-white text-base font-semibold leading-normal shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-transform hover:scale-105">
+<span>Read the Docs</span>
+</button>
+<button onclick = "talkToFounders" class="inline-flex items-center justify-center whitespace-nowrap rounded-lg h-12 px-6 bg-transparent text-slate-700 dark:text-slate-300 font-semibold leading-normal ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-transform hover:scale-105">
+<span>Talk to Founders</span>
+</button>
+</div>
+</div>
+<div class="flex justify-center lg:justify-end">
+<div class="w-full max-w-md rounded-xl p-6 sm:p-8 space-y-6 glass-card shadow-lg">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white">Live Escrow Status</h3>
+<span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-white/50 dark:bg-black/20">
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Active Escrows</p>
+<p class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">1,428</p>
+<p class="text-sm font-medium text-green-600 dark:text-green-400">+5.2%</p>
+</div>
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-white/50 dark:bg-black/20">
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Total Value Locked</p>
+<p class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">$2.1M</p>
+<p class="text-sm font-medium text-green-600 dark:text-green-400">+8.1%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-20 sm:py-24">
+<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col gap-4 text-center">
+<h2 class="text-4xl font-extrabold tracking-tighter text-slate-900 dark:text-white sm:text-5xl">A Feature Set for the Future of Commerce</h2>
+<p class="max-w-2xl mx-auto text-base text-slate-600 dark:text-slate-400 sm:text-lg">Explore the core components that make SynLedger the most reliable escrow platform on the web.</p>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">layers</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Hybrid by Design</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Combines the security of on-chain logic with the flexibility of off-chain data and computation.</p>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">gavel</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Dispute-Ready</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Our platform includes built-in, fair, and efficient dispute resolution mechanisms to protect all parties.</p>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Developer-First</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Easily integrate SynLedger into your dApp or platform with our comprehensive APIs and SDKs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-20 sm:py-24 bg-white dark:bg-slate-900/50">
+<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col gap-4 text-center">
+<h2 class="text-4xl font-extrabold tracking-tighter text-slate-900 dark:text-white sm:text-5xl">How It Works</h2>
+<p class="max-w-2xl mx-auto text-base text-slate-600 dark:text-slate-400 sm:text-lg">Get started in three simple steps. Create, fund, and let our smart contracts handle the rest.</p>
+</div>
+<div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3">
+<div class="flex flex-col items-center text-center gap-4">
+<div class="flex items-center justify-center h-20 w-20 rounded-full border-2 border-primary/20 bg-primary/10 text-primary font-bold text-3xl">01</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Create Agreement</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Define the terms of your agreement, including milestones and payment conditions, directly on our platform.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-4">
+<div class="flex items-center justify-center h-20 w-20 rounded-full border-2 border-primary/20 bg-primary/10 text-primary font-bold text-3xl">02</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Fund Escrow</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Deposit funds into a secure, decentralized smart contract. Your assets are locked until conditions are met.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-4">
+<div class="flex items-center justify-center h-20 w-20 rounded-full border-2 border-primary/20 bg-primary/10 text-primary font-bold text-3xl">03</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Auto-Release Funds</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Once milestones are verifiably completed, funds are automatically and instantly released to the recipient.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Use Cases Section -->
+<section class="py-20 sm:py-24">
+<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col gap-4 text-center">
+<h2 class="text-4xl font-extrabold tracking-tighter text-slate-900 dark:text-white sm:text-5xl">Built for the New Economy</h2>
+<p class="max-w-2xl mx-auto text-base text-slate-600 dark:text-slate-400 sm:text-lg">From freelance gigs to complex DAO operations, SynLedger provides the trust layer for a variety of use cases.</p>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">work</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Freelance &amp; Gig Work</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Ensure freelancers get paid on time for completed work and clients receive what they've paid for.</p>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">DAO Bounties &amp; Grants</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Automate payments for DAO contributions and grants, releasing funds only when proposals are met.</p>
+</div>
+<div class="flex flex-col gap-4 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">SLA-Based Escrows</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">Create service level agreements that automatically trigger payments based on performance metrics.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 items-start">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-white">SynLedger</h2>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">Programmable Escrow for the Web3 Economy.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:col-span-2 gap-8">
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Product</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Features</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Use Cases</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Docs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Company</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Founders</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Community</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">GitHub</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Twitter</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Discord</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between">
+<p class="text-sm text-slate-600 dark:text-slate-400">© 2025 SynLedger. All rights reserved.</p>
+<div class="flex items-center gap-4 mt-4 sm:mt-0">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">code_blocks</span> <!-- Placeholder for GitHub -->
+</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">flutter</span> <!-- Placeholder for Twitter -->
+</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">forum</span> <!-- Placeholder for Discord -->
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
